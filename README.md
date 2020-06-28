@@ -1,7 +1,7 @@
 # README
 
 ## ER図
-<img width="479" alt="de297f3d6d527442a00903dc81df4454" src="https://user-images.githubusercontent.com/64832157/83985356-e1a15000-a973-11ea-8e15-474c975ecdef.png">
+<img width="442" alt="ce974b8162d728e6af93f73b4eadb93e" src="https://user-images.githubusercontent.com/64832157/85948046-64249a80-b989-11ea-8c9e-476507a3ab5b.png">
 
 ## usersテーブル
 |Column|Type|Options|
@@ -91,3 +91,12 @@
 |name|string|index: true|
 ### Association
 - has_many :items
+
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :item
